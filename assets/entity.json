@@ -1,0 +1,66 @@
+{
+  "npcs": [
+    {
+      "id": 1,
+      "name": "Village Elder",
+      "role": "Quest Giver",
+      "dialogue": [
+        "Welcome, traveler. How can I assist you?",
+        "Beware of the shadows lurking in the forest."
+      ],
+      "location": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": 2,
+      "name": "Merchant",
+      "role": "Trader",
+      "dialogue": [
+        "Take a look at my wares!",
+        "I have the finest goods in the land."
+      ],
+      "location": {
+        "x": 150,
+        "y": 250
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": 1,
+      "name": "Shadow Wolf",
+      "type": "Beast",
+      "health": 50,
+      "damage": 10,
+      "loot": [
+        {
+          "item": "Wolf Pelt",
+          "chance": 0.5
+        },
+        {
+          "item": "Shadow Fang",
+          "chance": 0.2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dark Sorcerer",
+      "type": "Humanoid",
+      "health": 100,
+      "damage": 25,
+      "loot": [
+        {
+          "item": "Magic Staff",
+          "chance": 0.1
+        },
+        {
+          "item": "Dark Robe",
+          "chance": 0.3
+        }
+      ]
+    }
+  ]
+}

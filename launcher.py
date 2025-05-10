@@ -4,6 +4,7 @@ import random
 from colorama import Fore
 import os
 import time
+import engine
 
 def clear_screen():
 	print("\033c", end='')
@@ -70,7 +71,7 @@ def file_create():
 		print(Fore.GREEN + "Player stats generated." + Fore.RESET)
 		print(json.dumps(template_data["player"]["stats"], indent=4))
 		stats_choice = input(Fore.YELLOW + "Do you want to reroll? (y/n): " + Fore.RESET)
-		if stats_choice.lower() == 'y':
+		if stats_choice.lower() == 'y' or stats_choice.lower() == '':
 			clear_screen()
 			continue
 		elif stats_choice.lower() == 'n':
@@ -87,16 +88,18 @@ def file_create():
 def main():
 	while True:
 		clear_screen()
-		option = display_menu_curses("Welcome to Blade of Shadows v0.0.5", ['New', 'Continue', 'Settings', 'Quit'])
+		option = display_menu_curses("Welcome to Blade of Shadows v0.0.7", ['New', 'Continue', 'Settings', 'Quit'])
 
 		if option == 'New':
 			file_create()
+			if os.path.exists('assets/player_data.json'):
+				engine.main()
 		elif option == 'Continue':
 			if not os.path.exists('assets/player_data.json'):
 				print(Fore.RED + "No saved game found. Please create a new game first." + Fore.RESET)
 				time.sleep(2)
 			else:
-				print("You selected Continue")
+				engine.main()
 				break
 		elif option == 'Settings':
 			print("You selected Settings")

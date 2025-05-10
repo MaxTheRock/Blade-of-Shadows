@@ -1,0 +1,59 @@
+{
+  "weapons": {
+    "sword": {
+      "name": "Shadow Blade",
+      "damage": 50,
+      "weight": 10,
+      "rarity": "legendary"
+    },
+    "bow": {
+      "name": "Eclipse Bow",
+      "damage": 35,
+      "weight": 5,
+      "rarity": "rare"
+    },
+    "dagger": {
+      "name": "Nightfang",
+      "damage": 25,
+      "weight": 2,
+      "rarity": "epic"
+    }
+  },
+  "defence": {
+    "shield": {
+      "name": "Aegis of Twilight",
+      "defense": 40,
+      "weight": 15,
+      "rarity": "legendary"
+    },
+    "armor": {
+      "name": "Shadowmail",
+      "defense": 60,
+      "weight": 25,
+      "rarity": "epic"
+    },
+    "helmet": {
+      "name": "Cowl of Darkness",
+      "defense": 20,
+      "weight": 5,
+      "rarity": "rare"
+    }
+  },
+  "potions": {
+    "health": {
+      "name": "Elixir of Vitality",
+      "effect": "restore 50 HP",
+      "rarity": "common"
+    },
+    "mana": {
+      "name": "Arcane Draught",
+      "effect": "restore 30 MP",
+      "rarity": "common"
+    },
+    "strength": {
+      "name": "Potion of Might",
+      "effect": "increase strength by 10 for 5 minutes",
+      "rarity": "uncommon"
+    }
+  }
+}
